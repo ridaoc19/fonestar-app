@@ -62,7 +62,6 @@ npm run build
 
 Para iniciar Storybook, utiliza el comando `npm run storybook`. Para verificar la integridad y el funcionamiento de las historias, así como para garantizar que las pruebas estén en orden, ejecuta `npm run test-storybook`. Es importante destacar que este último comando solo funcionará si ya has iniciado Storybook con el comando anterior.
 
-
 ```bash
 npm run storybook
 npm run test-storybook
