@@ -1,6 +1,6 @@
 {
 	"name": "fonestar-app",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "fonestar app",
 	"main": "src/index.tsx",
 	"scripts": {
