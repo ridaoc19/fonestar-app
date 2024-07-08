@@ -1,0 +1,23 @@
+{
+  "name": "fonestar-app",
+  "version": "0.0.0",
+  "description": "fonestar app",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "webpack serve --mode development --open --port 3005",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridaoc19/fonestar-app.git"
+  },
+  "keywords": [
+    "fonestar",
+    "React",
+    "typescript"
+  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
