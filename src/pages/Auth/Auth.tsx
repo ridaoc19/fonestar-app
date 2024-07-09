@@ -11,7 +11,7 @@ export default function Auth() {
 			{ iName: 'email', iPlaceholder: 'Correo electrónico' },
 			{ iName: 'password', iPlaceholder: 'Contraseña' },
 		],
-		buttons: [{ bId: 'login', bText: 'Inicias sesión', bType: ButtonType.Dark, bValidate: false }],
+		buttons: [{ bId: 'login', bText: 'Inicias sesión', bType: ButtonType.Dark, bValidate: true }],
 	});
 
 	useEffect(() => {
