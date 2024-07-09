@@ -1,16 +1,16 @@
 @mixin button_repeat($type) {
-	width          : 100%;
-	display        : flex;
+	width: 100%;
+	display: flex;
 	justify-content: space-between;
-	gap            : 0.3rem;
-	min-height     : 2.5rem;
-	cursor         : pointer;
-	user-select    : none;
-	border-radius  : var(--border-radius);
-	outline        : none;
-	align-items    : center;
-	position       : relative;
-	transition     :
+	gap: 0.3rem;
+	min-height: 2.5rem;
+	cursor: pointer;
+	user-select: none;
+	border-radius: var(--border-radius);
+	outline: none;
+	align-items: center;
+	position: relative;
+	transition:
 		background-color 0.3s,
 		color 0.3s,
 		transform 0.3s;
@@ -22,56 +22,52 @@
 	span,
 	div {
 		pointer-events: none;
-		margin        : 0;
-		padding       : 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	@if $type==button_dark {
 		background-color: var(--base-main);
-		color           : var(--base-light);
-		border          : 1px solid var(--base-main);
+		color: var(--base-light);
+		border: 1px solid var(--base-main);
 
 		&:hover {
 			background-color: var(--base-hover);
-			border          : 1px solid var(--base-hover);
+			border: 1px solid var(--base-hover);
 		}
 
 		&:active {
 			background-color: var(--base-title);
-			border          : 1px solid var(--base-title);
+			border: 1px solid var(--base-title);
 		}
 
 		&:disabled {
 			background-color: var(--neutral-1);
-			color           : var(--neutral-4);
-			cursor          : not-allowed;
-			border          : 1px solid var(--neutral-5);
+			color: var(--neutral-4);
+			cursor: not-allowed;
+			border: 1px solid var(--neutral-5);
 		}
-	}
-
-	@else if $type==button_none {
+	} @else if $type==button_none {
 		background-color: transparent;
-		border          : none;
-		height          : 1.8rem;
-		padding         : 0;
+		border: none;
+		height: 1.8rem;
+		padding: 0;
 
 		.button__text-container {
-			margin      : 0;
+			margin: 0;
 			margin-right: auto;
 
 			div {
 				text-align: start;
 			}
 		}
-	}
-
-	@else if $type==button_highlighter {
+	} @else if $type==button_highlighter {
 		background-color: transparent;
-		border          : none;
-		border-radius   : 0;
+		border: none;
+		border-radius: 0;
 
 		.button__text-container {
-			margin      : 0;
+			margin: 0;
 			margin-right: auto;
 
 			div {
@@ -82,16 +78,14 @@
 		&:hover {
 			background-color: var(--neutral-2);
 		}
-	}
-
-	@else if $type==button_link {
+	} @else if $type==button_link {
 		background-color: transparent;
-		border          : none;
-		height          : 1.8rem;
-		padding         : 0;
+		border: none;
+		height: 1.8rem;
+		padding: 0;
 
 		.button__text-container {
-			margin      : 0;
+			margin: 0;
 			margin-right: auto;
 
 			div {
@@ -100,31 +94,29 @@
 		}
 
 		div {
-			display        : inline-block;
-			position       : relative;
-			color          : var(--base-main);
+			display: inline-block;
+			position: relative;
+			color: var(--base-main);
 			text-decoration: none;
 
 			&:after {
-				content   : '';
-				display   : block;
-				margin    : auto;
-				height    : 2px;
-				width     : 0px;
+				content: '';
+				display: block;
+				margin: auto;
+				height: 2px;
+				width: 0px;
 				transition: all 0.5s;
 			}
 
 			&:hover:after {
-				width     : 100%;
+				width: 100%;
 				background: var(--brand-6);
 			}
 		}
-	}
-
-	@else if $type==button_information {
+	} @else if $type==button_information {
 		background-color: var(--information-6);
-		color           : var(--base-light);
-		border          : 1px solid var(--information-6);
+		color: var(--base-light);
+		border: 1px solid var(--information-6);
 
 		&:hover {
 			background-color: var(--information-7);
@@ -132,21 +124,18 @@
 
 		&:active {
 			background-color: var(--information-8);
-			color           : var(--base-light);
-
+			color: var(--base-light);
 		}
 
 		&:disabled {
 			background-color: var(--neutral-1);
-			color           : var(--neutral-4);
-			cursor          : not-allowed;
+			color: var(--neutral-4);
+			cursor: not-allowed;
 		}
-	}
-
-	@else if $type==button_success {
+	} @else if $type==button_success {
 		background-color: var(--success-6);
-		color           : var(--base-light);
-		border          : 1px solid var(--success-6);
+		color: var(--base-light);
+		border: 1px solid var(--success-6);
 
 		&:hover {
 			background-color: var(--success-7);
@@ -154,21 +143,18 @@
 
 		&:active {
 			background-color: var(--success-8);
-			color           : var(--base-light);
-
+			color: var(--base-light);
 		}
 
 		&:disabled {
 			background-color: var(--neutral-1);
-			color           : var(--neutral-4);
-			cursor          : not-allowed;
+			color: var(--neutral-4);
+			cursor: not-allowed;
 		}
-	}
-
-	@else if $type==button_warning {
+	} @else if $type==button_warning {
 		background-color: var(--warning-6);
-		color           : var(--base-light);
-		border          : 1px solid var(--warning-6);
+		color: var(--base-light);
+		border: 1px solid var(--warning-6);
 
 		&:hover {
 			background-color: var(--warning-7);
@@ -176,21 +162,18 @@
 
 		&:active {
 			background-color: var(--warning-8);
-			color           : var(--base-light);
-
+			color: var(--base-light);
 		}
 
 		&:disabled {
 			background-color: var(--neutral-1);
-			color           : var(--neutral-4);
-			cursor          : not-allowed;
+			color: var(--neutral-4);
+			cursor: not-allowed;
 		}
-	}
-
-	@else if $type==button_error {
+	} @else if $type==button_error {
 		background-color: var(--error-6);
-		color           : var(--base-light);
-		border          : 1px solid var(--error-6);
+		color: var(--base-light);
+		border: 1px solid var(--error-6);
 
 		&:hover {
 			background-color: var(--error-7);
@@ -198,21 +181,20 @@
 
 		&:active {
 			background-color: var(--error-8);
-			color           : var(--base-light);
-
+			color: var(--base-light);
 		}
 
 		&:disabled {
 			background-color: var(--neutral-1);
-			color           : var(--neutral-4);
-			cursor          : not-allowed;
+			color: var(--neutral-4);
+			cursor: not-allowed;
 		}
 	}
 }
 
 .button {
 	button {
-		all        : unset;
+		all: unset;
 		line-height: 0;
 	}
 

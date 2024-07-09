@@ -10,12 +10,19 @@ export interface FormComponentProps<K extends string> {
 	component: string;
 	state: InitialState<K>[];
 	setState: Dispatch<SetStateAction<InitialState<K>[]>>;
-	buttons: { bId: string; bText: ButtonProps['text']; bType: ButtonProps['type']; bValidate?: boolean }[];
+	buttons: {
+		bId: string;
+		bText: ButtonProps['text'];
+		bType: ButtonProps['type'];
+		bValidate?: boolean;
+	}[];
 	handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
+	isLogo: boolean;
 }
 
 export default function FormComponent<K extends string>({
 	state,
+	isLogo,
 	setState,
 	buttons,
 	component,
@@ -24,15 +31,18 @@ export default function FormComponent<K extends string>({
 	return (
 		<div className='form-component-container'>
 			<div className='form-component'>
-				<header className='form-component__logo'>
-					<Svg type={SvgType.Logo} width={92} height={87} />
-				</header>
+				{isLogo && (
+					<header className='form-component__logo'>
+						<Svg type={SvgType.Logo} width={92} height={87} />
+					</header>
+				)}
 				<form className='form-component__form'>
 					<section className='form-component__form--inputs'>
 						{state.map(stateItem => {
 							const { iName, iPlaceholder, disabled } = stateItem;
 							const svgType =
-								SvgType[(iName.charAt(0).toUpperCase() + iName.slice(1)) as keyof typeof SvgType] || iName;
+								SvgType[(iName.charAt(0).toUpperCase() + iName.slice(1)) as keyof typeof SvgType] ||
+								iName;
 
 							let autoCompleteValue;
 							if (iName === 'password') {
@@ -53,7 +63,9 @@ export default function FormComponent<K extends string>({
 									other_attributes={{ autoComplete: autoCompleteValue }}
 									result={({ value }) => {
 										setState(prevState =>
-											prevState.map(item => (item.iName === iName ? { ...item, [iName]: value } : item))
+											prevState.map(item =>
+												item.iName === iName ? { ...item, [iName]: value } : item,
+											),
 										);
 									}}
 								/>
