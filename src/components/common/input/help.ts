@@ -6,16 +6,19 @@ export const getBorderColor = (errorMessage: string, value: string | number) => 
 		return _color['--error-6'];
 	}
 	if (value.toString().length === 0) {
-		return _color['--base-main'];
+		return _color['--base-text'];
 	}
 	return _color['--success-6'];
 };
 
-export const getSvgColor = (errorMessage: string | undefined) => {
+export const getSvgColor = (errorMessage: string | undefined, value: string | number) => {
 	if (errorMessage) {
 		return _color['--error-6'];
 	}
-	return '#848FAC';
+	if (value.toString().length === 0) {
+		return _color['--base-icon'];
+	}
+	return _color['--success-6'];
 };
 
 export const svgTypePassword = (svgType: SvgType, toggle: boolean): SvgType => {

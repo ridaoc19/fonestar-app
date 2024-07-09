@@ -65,8 +65,9 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 		case 'logo':
 			return (
 				<svg
-					width='282'
-					height='44'
+					role={type}
+					width={width}
+					height={height}
 					viewBox='0 0 282 44'
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
@@ -205,6 +206,370 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 					/>
 					<path
 						d='M14.8299 14.8299L9.16992 9.16992'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
+		case 'instagram':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_21)'>
+						<path
+							d='M14.375 19.375H5.625C2.875 19.375 0.625 17.125 0.625 14.375V5.625C0.625 2.875 2.875 0.625 5.625 0.625H14.375C17.125 0.625 19.375 2.875 19.375 5.625V14.375C19.375 17.125 17.125 19.375 14.375 19.375Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M10 14.375C12.4162 14.375 14.375 12.4162 14.375 10C14.375 7.58375 12.4162 5.625 10 5.625C7.58375 5.625 5.625 7.58375 5.625 10C5.625 12.4162 7.58375 14.375 10 14.375Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M15 5C15.3452 5 15.625 4.72018 15.625 4.375C15.625 4.02982 15.3452 3.75 15 3.75C14.6548 3.75 14.375 4.02982 14.375 4.375C14.375 4.72018 14.6548 5 15 5Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_21'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'facebook':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_15)'>
+						<path
+							d='M14.375 19.375H5.625C2.875 19.375 0.625 17.125 0.625 14.375V5.625C0.625 2.875 2.875 0.625 5.625 0.625H14.375C17.125 0.625 19.375 2.875 19.375 5.625V14.375C19.375 17.125 17.125 19.375 14.375 19.375Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M16.25 10H13.125V8.25C13.125 7.8125 13.4375 7.5 13.875 7.5H15.625V4.375H13.125C11.375 4.375 10 5.75 10 7.5V10H7.5V13.125H10V19.375H13.125V13.125H15L16.25 10Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_15'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'linkedIn':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_25)'>
+						<path
+							d='M14.375 19.375H5.625C2.875 19.375 0.625 17.125 0.625 14.375V5.625C0.625 2.875 2.875 0.625 5.625 0.625H14.375C17.125 0.625 19.375 2.875 19.375 5.625V14.375C19.375 17.125 17.125 19.375 14.375 19.375Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M6.875 8.125H4.375V15.625H6.875V8.125Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M12.8125 8.125C12.25 8.125 11.6875 8.3125 11.25 8.625V8.125H8.75V15.625H10H11.25V11.5625C11.25 11.0625 11.6875 10.625 12.1875 10.625C12.6875 10.625 13.125 11.0625 13.125 11.5625V15.625H15.625V10.9375C15.625 9.375 14.375 8.125 12.8125 8.125Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M5.625 6.25C6.31536 6.25 6.875 5.69036 6.875 5C6.875 4.30964 6.31536 3.75 5.625 3.75C4.93464 3.75 4.375 4.30964 4.375 5C4.375 5.69036 4.93464 6.25 5.625 6.25Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_25'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'twitter':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_30)'>
+						<path
+							d='M18.75 3.125C18.0625 3.5625 17.375 3.9375 16.5 4.125C15.75 3.125 14.5 2.5 13.125 2.5C10.6875 2.5 8.75 4.4375 8.75 6.875C8.75 7.125 8.75 7.375 8.8125 7.625C6.0625 7.1875 3.625 5.75 1.9375 3.625C1.625 4.1875 1.4375 4.875 1.4375 5.625C1.4375 7 2.125 8.1875 3.125 8.875C2.5 8.875 1.875 8.6875 1.375 8.375V8.4375C1.375 10.375 2.6875 11.9375 4.4375 12.3125C4.125 12.375 3.75 12.4375 3.4375 12.4375C3.1875 12.4375 2.9375 12.4375 2.6875 12.375C3.1875 13.9375 4.5625 15.0625 6.25 15.125C4.9375 16.1875 3.25 16.8125 1.5 16.8125C1.1875 16.8125 0.875 16.8125 0.5625 16.75C2.25 17.875 4.25 18.5 6.4375 18.5C13.4375 18.5 17.3125 12.5625 17.375 7.375L19.375 6.25L17.5 5.625L18.75 3.125Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_30'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'snapchat':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_32)'>
+						<path
+							d='M14.375 19.375H5.625C2.875 19.375 0.625 17.125 0.625 14.375V5.625C0.625 2.875 2.875 0.625 5.625 0.625H14.375C17.125 0.625 19.375 2.875 19.375 5.625V14.375C19.375 17.125 17.125 19.375 14.375 19.375Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M10 3.125C9.3125 3.125 8.9375 3.1875 8.25 3.5C7.125 4 6.4375 4.9375 6.3125 6.1875C6.25 6.875 6.3125 7.625 6.3125 8.3125C6.3125 8.5625 6.1875 8.6875 5.9375 8.5625C5.8125 8.5 5.6875 8.4375 5.625 8.4375C5.375 8.375 5.125 8.3125 4.875 8.25C4.6875 8.25 4.5 8.3125 4.4375 8.5C4.375 8.6875 4.375 8.875 4.5 9C4.625 9.125 4.75 9.25 4.875 9.3125C5.1875 9.5625 5.5 9.75 5.8125 9.9375C6.0625 10.125 6.125 10.375 6.0625 10.6875C5.9375 11.3125 5.625 11.875 5.25 12.3125C4.6875 12.9375 4.0625 13.375 3.3125 13.75C3.0625 13.875 3.0625 14 3.3125 14.125C3.625 14.25 3.9375 14.375 4.25 14.5C4.5625 14.625 4.9375 14.625 5 15.0625C5.0625 15.5625 5.1875 15.5 5.5625 15.5625C5.6875 15.5625 5.75 15.5625 5.875 15.5625C6.5625 15.5625 7.25 15.75 7.875 16.125C8.25 16.375 8.625 16.5625 9 16.6875C10 17 11 16.875 11.875 16.25C12.5625 15.75 13.375 15.5625 14.1875 15.5625C14.3125 15.5625 14.4375 15.5 14.625 15.5C14.875 15.5 14.9375 15.375 15 15.125C15 14.8125 15.1875 14.6875 15.4375 14.5625C15.875 14.4375 16.25 14.25 16.6875 14.0625C16.75 14.0625 16.875 13.9375 16.875 13.875C16.875 13.8125 16.75 13.75 16.6875 13.6875C16.3125 13.4375 15.875 13.25 15.5 12.9375C14.75 12.375 14.1875 11.625 13.875 10.75C13.75 10.375 13.8125 10.1875 14.125 9.9375C14.25 9.8125 14.4375 9.75 14.5625 9.625C14.875 9.4375 15.125 9.1875 15.4375 9C15.5625 8.875 15.625 8.6875 15.5625 8.5C15.5 8.3125 15.3125 8.25 15.1875 8.25C15 8.25 14.875 8.3125 14.6875 8.3125C14.4375 8.375 14.25 8.5 14.0625 8.5625C13.875 8.625 13.6875 8.5 13.75 8.3125C13.8125 7.5625 13.8125 6.8125 13.75 6.125C13.6875 5.4375 13.375 4.8125 12.9375 4.3125C12.0625 3.5 11.125 3.125 10 3.125Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_32'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'messenger':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_18)'>
+						<path
+							d='M10 1.25C4.8125 1.25 0.625 5 0.625 9.6875C0.625 12.375 2 14.75 4.1875 16.3125L4.375 18.75C4.375 19.0625 4.75 19.25 5 19.0625L7.375 17.75C8.25 18 9.125 18.125 10.0625 18.125C15.25 18.125 19.4375 14.375 19.4375 9.6875C19.4375 5 15.1875 1.25 10 1.25Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M6.81251 8.68752L4.43751 11.8125C4.25001 12.0625 4.50001 12.375 4.81251 12.25L7.81251 10.75C7.87501 10.6875 8.00001 10.6875 8.06251 10.75L10.4375 11.9375C11.375 12.4375 12.5625 12.125 13.25 11.25L15.625 8.12502C15.8125 7.87502 15.5625 7.56252 15.25 7.68752L12.25 9.18752C12.1875 9.25002 12.0625 9.25002 12 9.18752L9.62501 8.00002C8.62501 7.56252 7.43751 7.81252 6.81251 8.68752Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_18'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'phone-social':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_7)'>
+						<path
+							d='M13.5625 12.5625C13.75 12 13.75 11.5625 13.6875 11.4375C13.625 11.3125 13.5 11.3125 13.25 11.1875C13 11.0625 11.875 10.5 11.6875 10.4375C11.5 10.375 11.25 10.375 11.125 10.625C10.875 10.9375 10.6875 11.25 10.5 11.4375C10.375 11.5625 10.125 11.625 9.9375 11.5C9.6875 11.375 8.9375 11.125 8.0625 10.375C7.375 9.75 6.9375 9 6.75 8.75C6.625 8.5 6.75 8.375 6.875 8.25C7 8.125 7.125 8 7.25 7.875C7.375 7.75 7.4375 7.6875 7.5 7.5C7.5625 7.375 7.5 7.1875 7.4375 7.0625C7.375 6.9375 6.9375 5.8125 6.75 5.375C6.625 5.0625 6.5 5.0625 6.25 5.0625C6.1875 5 6.0625 5 6 5C5.6875 5 5.375 5.0625 5.1875 5.3125C4.9375 5.5625 4.375 6.125 4.375 7.25C4.375 8.375 5.1875 9.5 5.3125 9.625C5.4375 9.75 6.9375 12.125 9.25 13.125C11.0625 13.875 11.625 13.8125 12 13.75C12.625 13.5625 13.375 13.125 13.5625 12.5625Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M10 0.625C4.8125 0.625 0.625 1.8125 0.625 8.75C0.625 13.25 2.375 15.3125 5 16.25V19C5 19.375 5.4375 19.5625 5.75 19.3125L8.1875 16.875C8.75 16.875 9.375 16.875 10 16.875C15.1875 16.875 19.375 15.6875 19.375 8.75C19.375 1.8125 15.1875 0.625 10 0.625Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M9.6875 7C10.5 7 11.125 7.625 11.125 8.4375'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M9.6875 3.125C12.625 3.125 15 5.5 15 8.4375'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M9.6875 5.0625C11.5625 5.0625 13.0625 6.5625 13.0625 8.4375'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_7'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'whatsapp':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 20 20'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<g clipPath='url(#clip0_24_2)'>
+						<path
+							d='M10.625 0.625C5.8125 0.625 1.875 4.5625 1.875 9.375C1.875 11.5 2.6875 13.5 3.9375 15L2.5 19.375L7.0625 17.375C8.125 17.875 9.375 18.125 10.625 18.125C15.4375 18.125 19.375 14.1875 19.375 9.375C19.375 4.5625 15.4375 0.625 10.625 0.625Z'
+							stroke={color}
+							strokeWidth='1'
+							strokeMiterlimit='10'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+						/>
+						<path
+							d='M15.4375 12.5625C15.625 12 15.625 11.5625 15.5625 11.4375C15.5 11.3125 15.375 11.3125 15.125 11.1875C14.875 11.0625 13.75 10.5 13.5625 10.4375C13.375 10.375 13.125 10.375 13 10.625C12.75 10.9375 12.5625 11.25 12.375 11.4375C12.25 11.5625 12 11.625 11.8125 11.5C11.5625 11.375 10.8125 11.125 9.9375 10.375C9.25 9.75 8.8125 9 8.625 8.75C8.5 8.5 8.625 8.375 8.75 8.25C8.875 8.125 9 8 9.125 7.875C9.25 7.75 9.3125 7.6875 9.375 7.5C9.4375 7.375 9.375 7.1875 9.3125 7.0625C9.25 6.9375 8.8125 5.8125 8.625 5.375C8.5 5 8.375 5 8.125 5C8.0625 5 7.9375 5 7.875 5C7.5625 5 7.25 5.0625 7.0625 5.3125C6.8125 5.5625 6.25 6.125 6.25 7.25C6.25 8.375 7.0625 9.5 7.1875 9.625C7.3125 9.75 8.8125 12.125 11.125 13.125C12.9375 13.875 13.5 13.8125 13.875 13.75C14.5 13.5625 15.25 13.125 15.4375 12.5625Z'
+							stroke={color}
+							strokeWidth='1'
+						/>
+					</g>
+					<defs>
+						<clipPath id='clip0_24_2'>
+							<rect width={width} height={height} fill='white' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
+
+		case 'phone':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 24 24'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeMiterlimit='10'
+					/>
+				</svg>
+			);
+
+		case 'time':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 24 24'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M15.24 2H8.76004C5.00004 2 4.71004 5.38 6.74004 7.22L17.26 16.78C19.29 18.62 19 22 15.24 22H8.76004C5.00004 22 4.71004 18.62 6.74004 16.78L17.26 7.22C19.29 5.38 19 2 15.24 2Z'
 						stroke={color}
 						strokeWidth='1.5'
 						strokeLinecap='round'
