@@ -9,6 +9,8 @@ const initialStateContext: StateReturn = {
 		/* no-op: dispatch is initialized later */
 	},
 	login: async () => Promise.resolve(),
+	getPrompts: async () => Promise.resolve(),
+	updateFeedback: async () => Promise.resolve(),
 	selector: initialState,
 };
 

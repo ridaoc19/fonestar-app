@@ -5,6 +5,7 @@ export enum TypeReducer {
 	LOGIN = 'LOGIN',
 	LOGOUT = 'LOGOUT',
 	STATUS = 'STATUS',
+	PROMPT = 'PROMPT',
 }
 
 export interface TypeReducerMap {
@@ -32,6 +33,11 @@ export interface TypeReducerMap {
 	[TypeReducer.LOGOUT]: {
 		type: TypeReducer.LOGOUT;
 	};
+	[TypeReducer.PROMPT]: {
+		type: TypeReducer.PROMPT;
+		user: string;
+		prompts: GPrompt.Item[];
+	};
 }
 
 export interface AppAction<T> {
@@ -44,12 +50,16 @@ export type Reducer = (state: InitialState, action: TypeReducerMap[TypeReducer])
 export interface InitialState {
 	status: 'idle' | 'pending' | 'error' | 'success';
 	isLogin: boolean;
+	user: string;
+	prompts: GPrompt.Item[];
 	error: string;
 }
 
 export const initialState: InitialState = {
 	status: 'idle',
 	isLogin: false,
+	user: '',
+	prompts: [],
 	error: '',
 };
 
@@ -68,11 +78,20 @@ const reducer: Reducer = (state, action) => {
 			return { ...state, status: 'idle', error: '' };
 
 		case TypeReducer.LOGIN:
-			return { ...state, status: 'success', isLogin: true };
+			return { ...state, status: 'idle', isLogin: true };
 
 		case TypeReducer.LOGOUT:
 			localStorage.removeItem('fstoken');
 			return { ...state, status: 'idle', isLogin: false };
+
+		case TypeReducer.PROMPT:
+			return {
+				...state,
+				status: 'idle',
+				isLogin: true,
+				user: action.user,
+				prompts: action.prompts,
+			};
 
 		default:
 			return state;
