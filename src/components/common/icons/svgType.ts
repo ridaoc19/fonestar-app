@@ -13,6 +13,8 @@ export enum SvgType {
 	ClosedEye = 'closedEye',
 	Logo = 'logo',
 	Password = 'password',
+	Phone = 'phone',
+	Time = 'time',
 	Email = 'email',
 	NewEmail = 'newEmail',
 	ArrowLeft = 'arrowLeft',
@@ -22,4 +24,13 @@ export enum SvgType {
 	Close = 'close',
 	Spanish = 'Spanish',
 	English = 'English',
+
+	Facebook = 'facebook', // 📘
+	Twitter = 'twitter', // 🐦
+	LinkedIn = 'linkedIn', // 🔗
+	Instagram = 'instagram', // 📸
+	Snapchat = 'snapchat', // 👻
+	Messenger = 'messenger', // 💬
+	PhoneSocial = 'phone-social', // 📱
+	Whatsapp = 'whatsapp', // 🟢
 }

@@ -32,7 +32,7 @@ function Button({
 						type: svgLeft,
 						height: 16,
 						width: 16,
-						color: _color['--base-light'],
+						color: _color['--base-icon'],
 					})}
 				</span>
 			)}
@@ -47,7 +47,7 @@ function Button({
 						type: svgRight,
 						height: 16,
 						width: 16,
-						color: _color['--base-light'],
+						color: _color['--base-icon'],
 					})}
 				</span>
 			)}

@@ -1,8 +1,10 @@
-import { MouseEvent, ReactNode, useState } from 'react';
+import { MouseEvent, ReactNode, useContext, useState } from 'react';
 import { ButtonProps } from '../../components/common/button/button.type';
 import { InputProps } from '../../components/common/input/Input';
 import FormComponent from './FormComponent/FormComponent';
 import useValidations from '../useValidations/useValidations';
+import { CreateContext } from '../useContext';
+import { TypeReducer } from '../useContext/reducer';
 
 export interface UseFormProps<T, K> {
 	isLogo?: boolean;
@@ -19,7 +21,6 @@ export interface UseFormProps<T, K> {
 export type InitialState<K extends string> = {
 	[key in K]: string;
 } & {
-	// error: string;
 	iName: string;
 	iPlaceholder: string;
 	disabled: boolean;
@@ -38,6 +39,7 @@ export default function useForm<T extends string, K extends string>({
 	component,
 }: UseFormProps<T, K>): UseFormReturn<T, K> {
 	const { getValidationErrors } = useValidations();
+	const { dispatch } = useContext(CreateContext);
 	const [eventClick, setEventClick] = useState<UseFormReturn<T, K>['eventClick']>({
 		state: [],
 		value: '' as T,
@@ -59,15 +61,16 @@ export default function useForm<T extends string, K extends string>({
 		if (buttons.find(({ bId }) => bId === value)?.bValidate) {
 			const validateError: string[] = state
 				.map(item => {
-					const { message, name } = getValidationErrors({
+					const { message } = getValidationErrors({
 						name: item.iName,
 						value: item[item.iName as K],
 					});
-					return message ? `${name}: ${message}` : '';
+					return message ? `${message}` : '';
 				})
 				.filter(Boolean);
 
 			if (validateError.length > 0) {
+				dispatch({ type: TypeReducer.ERROR, payload: '- ' + validateError.join('\n- ') });
 			} else {
 				setEventClick({ state, value: value as T });
 			}

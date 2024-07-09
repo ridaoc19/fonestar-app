@@ -34,7 +34,7 @@ function Input({
 }: InputProps) {
 	const { getValidationErrors } = useValidations();
 	const [{ value, error }, setState] = useState<{ value: string | number; error: string }>({
-		value: initialValue || '',
+		value: initialValue ?? '',
 		error: '',
 	});
 	const [toggle, setToggle] = useState(false);
@@ -60,6 +60,7 @@ function Input({
 		} else {
 			result({ value: '' });
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [value, error]);
 
 	let autoCompleteValue;
@@ -91,7 +92,7 @@ function Input({
 								type: newSvgLeft,
 								height: 16,
 								width: 16,
-								color: getSvgColor(error),
+								color: getSvgColor(error, value),
 							})}
 					</span>
 					<input
@@ -121,7 +122,7 @@ function Input({
 								type: newSvgRight,
 								height: 16,
 								width: 16,
-								color: getSvgColor(error),
+								color: getSvgColor(error, value),
 							})}
 					</span>
 				</span>

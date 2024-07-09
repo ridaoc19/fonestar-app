@@ -33,7 +33,7 @@ export default function FormComponent<K extends string>({
 			<div className='form-component'>
 				{isLogo && (
 					<header className='form-component__logo'>
-						<Svg type={SvgType.Logo} width={92} height={87} />
+						<Svg type={SvgType.Logo} width={282} height={44} />
 					</header>
 				)}
 				<form className='form-component__form'>
