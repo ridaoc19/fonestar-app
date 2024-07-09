@@ -5,6 +5,7 @@ import FormComponent from './FormComponent/FormComponent';
 import useValidations from '../useValidations/useValidations';
 
 export interface UseFormProps<T, K> {
+	isLogo?: boolean;
 	component: string;
 	inputs: { iName: K; iPlaceholder: InputProps['placeholder'] }[];
 	buttons: {
@@ -32,6 +33,7 @@ export interface UseFormReturn<T, K extends string> {
 
 export default function useForm<T extends string, K extends string>({
 	inputs,
+	isLogo = true,
 	buttons,
 	component,
 }: UseFormProps<T, K>): UseFormReturn<T, K> {
@@ -77,6 +79,7 @@ export default function useForm<T extends string, K extends string>({
 	return {
 		Component: (
 			<FormComponent
+				isLogo={isLogo}
 				component={component}
 				state={state}
 				buttons={buttons}

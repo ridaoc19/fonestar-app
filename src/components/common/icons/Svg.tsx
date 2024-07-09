@@ -37,7 +37,7 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 				<svg
 					stroke={color}
 					fill='currentColor'
-					stroke-width='0'
+					strokeWidth='0'
 					viewBox='0 0 576 512'
 					width={width}
 					height={height}
@@ -52,7 +52,7 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 				<svg
 					stroke={color}
 					fill='currentColor'
-					stroke-width='0'
+					strokeWidth='0'
 					viewBox='0 0 640 512'
 					width={width}
 					height={height}
@@ -71,7 +71,7 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
 				>
-					<g clip-path='url(#clip0_176_2)'>
+					<g clipPath='url(#clip0_176_2)'>
 						<path
 							d='M241.477 0.786011C241.991 0.786011 242.328 0.899011 242.494 1.11701C242.66 1.33801 242.748 1.62801 242.754 1.99301L242.748 41.548C242.69 42.382 242.276 42.81 241.521 42.81H232.422C231.618 42.81 231.284 42.479 231.367 41.838L231.547 35.12H221.022L217.92 41.838C217.597 42.479 217.083 42.81 216.37 42.81H207.505C206.668 42.81 206.483 42.382 206.939 41.548L227.295 1.99301C227.668 1.19201 228.309 0.786011 229.218 0.786011H241.477ZM224.833 27.172H232.159L232.872 9.43201L224.833 27.172Z'
 							fill='#DB052C'
@@ -173,6 +173,40 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 						stroke={color}
 						strokeWidth='1.5'
 						strokeMiterlimit='10'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
+		case 'close':
+			return (
+				<svg
+					role={type}
+					width={width}
+					height={height}
+					viewBox='0 0 24 24'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+					<path
+						d='M9.16992 14.8299L14.8299 9.16992'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+					<path
+						d='M14.8299 14.8299L9.16992 9.16992'
+						stroke={color}
+						strokeWidth='1.5'
 						strokeLinecap='round'
 						strokeLinejoin='round'
 					/>

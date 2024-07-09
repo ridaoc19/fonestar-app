@@ -1,4 +1,4 @@
-import _color from "../../../styles/index/global/_color";
+import _color from '../../../styles/index/global/_color';
 
 function Spinner({ color = _color['--base-main'] }: { color?: string }) {
 	return (

@@ -19,7 +19,7 @@ export enum SvgType {
 	ArrowRight = 'arrowRight',
 	ArrowTop = 'arrowTop',
 	ArrowBottom = 'arrowBottom',
-
+	Close = 'close',
 	Spanish = 'Spanish',
 	English = 'English',
 }
