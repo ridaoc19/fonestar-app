@@ -1,0 +1,97 @@
+.prompt-table {
+  .table {
+    display              : grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap                  : 0.5rem;
+    padding              : 0.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap                  : 0;
+    }
+
+    .header {
+      font-weight     : bold;
+      background-color: var(--base-background);
+      padding         : 0.7rem;
+      text-align      : center;
+
+      @media (max-width: 768px) {
+        text-align: left;
+      }
+
+      &.hide-mobile {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .row {
+      display: contents;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      &.even {
+        background-color: var(--base-light);
+        border          : 1px solid var(--base-background);
+      }
+
+      &.odd {
+        background-color: var(--base-background);
+        border          : 1px solid var(--base-background);
+      }
+    }
+
+    .cell {
+      padding        : 10px;
+      text-align     : center;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      cursor         : pointer;
+
+      @media (max-width: 768px) {
+        text-align     : left;
+        justify-content: flex-start;
+
+        &:first-child {
+          cursor: pointer;
+        }
+      }
+
+      &.hide-mobile {
+        @media (max-width: 768px) {
+          display: none;
+
+          &.open {
+            display: block;
+          }
+        }
+      }
+
+      &.prompt {
+        cursor: pointer;
+      }
+    }
+
+    .edit-btn {
+      max-width: 4rem;
+      >button{
+        min-height: 2rem
+      }
+    }
+
+    .mobile-title {
+      display     : none;
+      font-weight : bold;
+      margin-right: 5px;
+
+      @media (max-width: 768px) {
+        display: inline;
+      }
+    }
+  }
+}

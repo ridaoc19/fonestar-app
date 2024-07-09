@@ -5,6 +5,7 @@ import { TypeReducer } from './hooks/useContext/reducer';
 import Auth from './pages/Auth/Auth';
 import './styles/app/app.scss';
 import Layout from './components/layout/Layout';
+import Home from './pages/Home/Home';
 
 export default function App() {
 	const { dispatch, selector } = useContext(CreateContext);
@@ -24,7 +25,7 @@ export default function App() {
 				<Auth />
 			) : (
 				<Layout>
-					<h1>hola</h1>
+					<Home />
 				</Layout>
 			)}
 		</div>
