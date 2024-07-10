@@ -578,6 +578,86 @@ function Svg({ type, width = 24, height = 24, color = _color['--base-icon'] }: S
 				</svg>
 			);
 
+		case 'arrowLeft':
+			return (
+				<svg
+					width={width}
+					height={height}
+					viewBox='0 0 9 18'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M8.00009 16.92L1.48009 10.4C0.710088 9.62996 0.710088 8.36996 1.48009 7.59996L8.00009 1.07996'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeMiterlimit='10'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
+		case 'arrowRight':
+			return (
+				<svg
+					width={width}
+					height={height}
+					viewBox='0 0 9 18'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M0.909912 16.92L7.42991 10.4C8.19991 9.62996 8.19991 8.36996 7.42991 7.59996L0.909912 1.07996'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeMiterlimit='10'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
+		case 'arrowTop':
+			return (
+				<svg
+					width={width}
+					height={height}
+					viewBox='0 0 18 9'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M16.9201 8.05001L10.4001 1.53001C9.63008 0.760015 8.37008 0.760015 7.60008 1.53001L1.08008 8.05001'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeMiterlimit='10'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
+		case 'arrowBottom':
+			return (
+				<svg
+					width={width}
+					height={height}
+					viewBox='0 0 18 9'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<path
+						d='M16.9201 0.949951L10.4001 7.46995C9.63008 8.23995 8.37008 8.23995 7.60008 7.46995L1.08008 0.949951'
+						stroke={color}
+						strokeWidth='1.5'
+						strokeMiterlimit='10'
+						strokeLinecap='round'
+						strokeLinejoin='round'
+					/>
+				</svg>
+			);
+
 		default:
 			return null;
 	}
