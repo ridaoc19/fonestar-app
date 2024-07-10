@@ -25,12 +25,12 @@ export enum SvgType {
 	Spanish = 'Spanish',
 	English = 'English',
 
-	Facebook = 'facebook', // 📘
-	Twitter = 'twitter', // 🐦
-	LinkedIn = 'linkedIn', // 🔗
-	Instagram = 'instagram', // 📸
-	Snapchat = 'snapchat', // 👻
-	Messenger = 'messenger', // 💬
-	PhoneSocial = 'phone-social', // 📱
-	Whatsapp = 'whatsapp', // 🟢
+	Facebook = 'facebook',
+	Twitter = 'twitter',
+	LinkedIn = 'linkedIn',
+	Instagram = 'instagram',
+	Snapchat = 'snapchat',
+	Messenger = 'messenger',
+	PhoneSocial = 'phone-social',
+	Whatsapp = 'whatsapp',
 }

@@ -1,109 +1,107 @@
 .prompt-table {
-  .table {
-    display              : grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap                  : 0.5rem;
-    padding              : 0.5rem;
+	.table {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 0.5rem;
+		padding: 0.5rem;
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      gap                  : 0;
-    }
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			gap: 0;
+		}
 
-    .header {
-      font-weight     : bold;
-      background-color: var(--base-background);
-      padding         : 0.7rem;
-      text-align      : center;
+		.header {
+			font-weight: bold;
+			background-color: var(--base-background);
+			padding: 0.7rem;
+			text-align: center;
 
-      @media (max-width: 768px) {
-        text-align: left;
-      }
+			@media (max-width: 768px) {
+				text-align: left;
+			}
 
-      &.hide-mobile {
-        @media (max-width: 768px) {
-          display: none;
-        }
-      }
-    }
+			&.hide-mobile {
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
+		}
 
-    .row {
-      display: contents;
+		.row {
+			display: contents;
 
-      @media (max-width: 768px) {
-        display: block;
-      }
+			@media (max-width: 768px) {
+				display: block;
+			}
 
-      &.even {
-        background-color: var(--base-light);
-        border          : 1px solid var(--base-background);
-      }
+			&.even {
+				background-color: var(--base-light);
+				border: 1px solid var(--base-background);
+			}
 
-      &.odd {
-        background-color: var(--base-background);
-        border          : 1px solid var(--base-background);
-      }
-    }
+			&.odd {
+				background-color: var(--base-background);
+				border: 1px solid var(--base-background);
+			}
+		}
 
-    .cell {
-      padding        : 10px;
-      text-align     : center;
-      display        : flex;
-      align-items    : center;
-      justify-content: center;
-      cursor         : pointer;
-      user-select    : none;
+		.cell {
+			padding: 10px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			user-select: none;
 
-      &:hover{
-        color: var(--base-main);
-      }
+			&:hover {
+				color: var(--base-main);
+			}
 
-      @media (max-width: 768px) {
-        text-align     : left;
-        justify-content: flex-start;
+			@media (max-width: 768px) {
+				text-align: left;
+				justify-content: flex-start;
 
-        &:first-child {
-          cursor: pointer;
-        }
-      }
+				&:first-child {
+					cursor: pointer;
+				}
+			}
 
-      &.hide-mobile {
-        @media (max-width: 768px) {
-          display: none;
+			&.hide-mobile {
+				@media (max-width: 768px) {
+					display: none;
 
-          &.open {
-            display: block;
-          }
-        }
-      }
+					&.open {
+						display: block;
+					}
+				}
+			}
 
-      &.prompt {
-        cursor  : pointer;
-        position: relative;
+			&.prompt {
+				cursor: pointer;
+				position: relative;
 
-        .edit-btn {
-          position: absolute;
-          top     : 0;
-          right   : 0;
-          padding : 0.3rem;
+				.edit-btn {
+					position: absolute;
+					top: 0;
+					right: 0;
+					padding: 0.3rem;
 
-          @media (min-width: 769px) {
-            display: none;
-          }
-        }
+					@media (min-width: 769px) {
+						display: none;
+					}
+				}
+			}
+		}
 
-      }
-    }
+		.mobile-title {
+			display: none;
+			font-weight: bold;
+			margin-right: 5px;
 
-
-    .mobile-title {
-      display     : none;
-      font-weight : bold;
-      margin-right: 5px;
-
-      @media (max-width: 768px) {
-        display: inline;
-      }
-    }
-  }
+			@media (max-width: 768px) {
+				display: inline;
+			}
+		}
+	}
 }
