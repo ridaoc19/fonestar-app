@@ -52,6 +52,11 @@
       align-items    : center;
       justify-content: center;
       cursor         : pointer;
+      user-select    : none;
+
+      &:hover{
+        color: var(--base-main);
+      }
 
       @media (max-width: 768px) {
         text-align     : left;
@@ -77,10 +82,10 @@
         position: relative;
 
         .edit-btn {
-          position        : absolute;
-          top             : 0;
-          right           : 0;
-          padding         : 0.3rem;
+          position: absolute;
+          top     : 0;
+          right   : 0;
+          padding : 0.3rem;
 
           @media (min-width: 769px) {
             display: none;
