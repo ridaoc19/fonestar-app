@@ -1,15 +1,20 @@
 import { useContext, useEffect, useState } from 'react';
 import { CreateContext } from '../../hooks/useContext';
 import { TypeReducer } from '../../hooks/useContext/reducer';
+import PromptForm from './PromptForm/PromptForm';
 import PromptTable from './PromptTable/PromptTable';
+
+export interface SelectedPrompt {
+	prompt: GPrompt.Item;
+	language: string;
+}
 
 export default function Home() {
 	const { getPrompts, dispatch, selector } = useContext(CreateContext);
-	const [selectedPrompt, setSelectedPrompt] = useState<GPrompt.Item | null>(null);
+	const [selectedPrompt, setSelectedPrompt] = useState<SelectedPrompt | null>(null);
 
-	const handleEdit = (prompt: GPrompt.Item) => {
-		console.log(prompt);
-		setSelectedPrompt(prompt);
+	const handleEdit = ({ prompt, language }: SelectedPrompt) => {
+		setSelectedPrompt({ prompt, language });
 	};
 
 	const handleCloseForm = () => {
@@ -21,7 +26,7 @@ export default function Home() {
 			handleCloseForm();
 			dispatch({ type: TypeReducer.STATUS, payload: 'idle' });
 		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selector]);
 
 	useEffect(() => {
@@ -35,6 +40,7 @@ export default function Home() {
 				<PromptTable handleEdit={handleEdit} />
 			</div>
 			<div className='home__prompt-form'>
+				<PromptForm selectedPrompt={selectedPrompt} handleCloseForm={handleCloseForm} />
 			</div>
 		</div>
 	);

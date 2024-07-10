@@ -1,7 +1,7 @@
 .prompt-table {
   .table {
     display              : grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap                  : 0.5rem;
     padding              : 0.5rem;
 
@@ -73,16 +73,23 @@
       }
 
       &.prompt {
-        cursor: pointer;
+        cursor  : pointer;
+        position: relative;
+
+        .edit-btn {
+          position        : absolute;
+          top             : 0;
+          right           : 0;
+          padding         : 0.3rem;
+
+          @media (min-width: 769px) {
+            display: none;
+          }
+        }
+
       }
     }
 
-    .edit-btn {
-      max-width: 4rem;
-      >button{
-        min-height: 2rem
-      }
-    }
 
     .mobile-title {
       display     : none;

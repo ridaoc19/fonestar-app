@@ -1,10 +1,12 @@
 const API_BASE_URL = process.env.API_BASE_URL;
 const API_KEY = process.env.API_KEY;
 
-export const promptsApi = async (): Promise<{
+type PromptApiResponse = Promise<{
 	data: { user: string; prompts: GPrompt.PromptApiResponse['_items'] } | null;
 	error: string | null;
-}> => {
+}>;
+
+export const promptsApi = async (): PromptApiResponse => {
 	try {
 		if (!API_BASE_URL || !API_KEY) {
 			throw new Error('Faltan variables de entorno');
@@ -25,12 +27,21 @@ export const promptsApi = async (): Promise<{
 				},
 			},
 		);
+		const result = await response.json();
 
 		if (!response.ok) {
-			throw new Error(`Error al obtener los prompts: ${response.status} ${response.statusText}`);
+			const found = result['status-sqls-details'].some((detail: Record<string, string>) =>
+				Object.values(detail).some(
+					value => typeof value === 'string' && value.includes('Login timeout expired'),
+				),
+			);
+			if (found) {
+				localStorage.removeItem('fstoken');
+			}
+			throw new Error(result['status-details']);
 		}
 
-		const { login, _items }: GPrompt.PromptApiResponse = await response.json();
+		const { login, _items }: GPrompt.PromptApiResponse = result;
 		return { error: null, data: { user: login.user, prompts: _items } };
 	} catch (error) {
 		if (error instanceof Error) {
@@ -47,6 +58,7 @@ export const promptsApi = async (): Promise<{
 	}
 };
 
+// !
 export interface UpdateFeedbackApi {
 	promptId: string;
 	feedback: string;
