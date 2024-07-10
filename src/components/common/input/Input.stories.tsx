@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { expect, fireEvent, fn, within } from '@storybook/test';
 import { SvgType } from '../icons/svgType';
 import Input from './Input';
 
@@ -44,7 +43,7 @@ type Story = StoryObj<typeof meta>;
 export const Inputs: Story = {
 	args: {
 		name: 'username',
-		result: () => {},
+		result: () => '',
 		placeholder: 'Usuario',
 	},
 };

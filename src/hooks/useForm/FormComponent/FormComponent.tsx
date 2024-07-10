@@ -73,14 +73,12 @@ export default function FormComponent<K extends string>({
 						})}
 					</section>
 					<section className='form-component__form--buttons'>
-						{buttons.map(({ bId, bText, bType, bValidate }) => (
+						{buttons.map(({ bId, bText, bType }) => (
 							<Button
 								key={bId}
 								id={`button__${component}--${bId}`}
 								type={bType}
 								text={bText}
-								// isLoading={status === 'pending' && !!bValidate}
-								// disabled={status === 'pending'}
 								value={bId}
 								handleClick={handleClick}
 							/>

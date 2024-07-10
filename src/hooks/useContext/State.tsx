@@ -48,7 +48,7 @@ function State() {
 				dispatch({ type: TypeReducer.ERROR, payload: error });
 			}
 			if (data) {
-				console.log(data)
+				console.log(data);
 				dispatch({ type: TypeReducer.PROMPT, user: data.user, prompts: data.prompts });
 			}
 		} catch (error) {
