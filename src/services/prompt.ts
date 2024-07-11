@@ -22,8 +22,9 @@ export const promptsApi = async (): PromptApiResponse => {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
-					'X-API-KEY': API_KEY ?? '',
+					'X-API-KEY': API_KEY,
 					fstoken: token,
+					kobayasimaru: 'true',
 				},
 			},
 		);
@@ -80,6 +81,7 @@ export const updateFeedbackApi = async ({ promptId, feedback }: UpdateFeedbackAp
 				'Content-Type': 'application/json',
 				'X-API-KEY': API_KEY,
 				fstoken: token,
+				kobayasimaru: 'true',
 			},
 			body: JSON.stringify({
 				Feedback: feedback,
@@ -90,6 +92,7 @@ export const updateFeedbackApi = async ({ promptId, feedback }: UpdateFeedbackAp
 		if (!response.ok) {
 			throw new Error(result['status-details']);
 		}
+		console.log(result);
 
 		return result;
 	} catch (error) {
