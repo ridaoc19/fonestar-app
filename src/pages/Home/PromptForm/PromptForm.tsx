@@ -5,6 +5,9 @@ import Input from '../../../components/common/input/Input';
 import { CreateContext } from '../../../hooks/useContext';
 import { TypeReducer } from '../../../hooks/useContext/reducer';
 import { SelectedPrompt } from '../Home';
+import Svg from '../../../components/common/icons/Svg';
+import { SvgType } from '../../../components/common/icons/svgType';
+import _color from '../../../styles/index/global/_color';
 
 interface PromptFormProps {
 	selectedPrompt: SelectedPrompt | null;
@@ -23,7 +26,7 @@ const PromptForm: React.FC<PromptFormProps> = ({ selectedPrompt, handleCloseForm
 						<div className='modal-header'>
 							<h2>{selectedPrompt?.prompt.IAMODEL ?? ''}</h2>
 							<button className='modal-close' onClick={handleCloseForm}>
-								×
+								<Svg type={SvgType.Close} color={_color['--base-main']} />
 							</button>
 						</div>
 
@@ -56,7 +59,7 @@ const PromptForm: React.FC<PromptFormProps> = ({ selectedPrompt, handleCloseForm
 										if (selectedPrompt && stateForm) {
 											updateFeedback({
 												promptId: selectedPrompt.prompt.PROMPTID,
-												feedback: stateForm,
+												feedback: JSON.stringify({ ...selectedPrompt.prompt, FEEDBACK: stateForm }),
 											});
 										}
 										dispatch({
